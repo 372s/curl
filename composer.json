@@ -1,0 +1,19 @@
+{
+    "name": "wq455133/php-curl",
+    "description": "curl",
+    "type": "library",
+    "authors": [
+        {
+            "name": "wangqiang",
+            "email": "602695391@qq.com"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "init.php"
+        ],
+        "psr-4": {
+            "WQ\\": "src/Curl"
+        }
+    }
+}
