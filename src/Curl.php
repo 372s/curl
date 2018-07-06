@@ -1,31 +1,37 @@
 <?php
-namespace WQ;
+namespace Qous;
 
 class Curl
 {
     public $curl;
 
-    public function __construct() {
+    public function __construct()
+    {
         // $this->curl = curl_init();
     }
 
-    public function get() {
+    public function get()
+    {
         return $this->request($api, 'GET', $params = [], $headers = []);
     }
 
-    public function post() {
+    public function post()
+    {
         return $this->request($api, 'POST', $params = [], $headers = []);
     }
 
-    public function put() {
+    public function put()
+    {
         return $this->request($api, 'PUT', $params = [], $headers = []);
     }
 
-    public function delete() {
+    public function delete()
+    {
         return $this->request($api, 'DELETE', $params = [], $headers = []);
     }
 
-    public function request($api, $method = 'GET', $params = array(), $headers = []) {
+    public function request($api, $method = 'GET', $params = array(), $headers = [])
+    {
         $curl = curl_init();
         switch (strtoupper($method)) {
             case 'GET':
