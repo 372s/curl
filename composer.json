@@ -17,7 +17,7 @@
             "init.php"
         ],
         "psr-4": {
-            "WQ\\": "src/Curl"
+            "WQ\\": "src"
         }
     }
 }
