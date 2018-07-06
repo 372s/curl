@@ -3,6 +3,7 @@
     "description": "php curl study",
     "type": "library",
     "license": "MIT",
+    "minimum-stability": "stable",
     "authors": [
         {
             "name": "王强",
