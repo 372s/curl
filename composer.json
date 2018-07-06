@@ -1,0 +1,21 @@
+{
+    "name": "wangqiang/php-curl",
+    "description": "php curl study",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "王强",
+            "email": "wangqiang@medlive.cn"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "files": [
+            "init.php"
+        ],
+        "psr-4": {
+            "WQ\\": "src/Curl"
+        }
+    }
+}
