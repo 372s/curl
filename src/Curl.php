@@ -3,29 +3,27 @@ namespace Qous\Curl;
 
 class Curl
 {
-    public $curl;
-
-    public function get()
+    public function get($api, $params = [], $headers = [])
     {
-        return $this->request($api, 'GET', $params = [], $headers = []);
+        return $this->request($api, 'GET', $params, $headers);
     }
 
-    public function post()
+    public function post($api, $params = [], $headers = [])
     {
-        return $this->request($api, 'POST', $params = [], $headers = []);
+        return $this->request($api, 'POST', $params, $headers);
     }
 
-    public function put()
+    public function put($api, $params = [], $headers = [])
     {
-        return $this->request($api, 'PUT', $params = [], $headers = []);
+        return $this->request($api, 'PUT', $params, $headers);
     }
 
-    public function delete()
+    public function delete($api, $params = [], $headers = [])
     {
-        return $this->request($api, 'DELETE', $params = [], $headers = []);
+        return $this->request($api, 'DELETE', $params, $headers);
     }
 
-    public function request($api, $method = 'GET', $params = array(), $headers = [])
+    public function request($api, $method = 'GET', $params, $headers)
     {
         $curl = curl_init();
         switch (strtoupper($method)) {
@@ -61,8 +59,7 @@ class Curl
         if ($response === false) {
             return array('error' => $err);
         } else {
-            $response = json_decode($response, true);
-            return $response;
+            return json_decode($response, true);
         }
     }
 }
