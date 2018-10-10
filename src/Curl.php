@@ -1,5 +1,5 @@
 <?php
-namespace Qous;
+namespace Qous\Curl;
 
 class Curl
 {
