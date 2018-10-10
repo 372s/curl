@@ -1,14 +1,9 @@
 <?php
-namespace WPollen;
+namespace Qous;
 
 class Curl
 {
     public $curl;
-
-    public function __construct()
-    {
-        // $this->curl = curl_init();
-    }
 
     public function get()
     {
@@ -63,8 +58,8 @@ class Curl
         $err = curl_error($curl);
         curl_close($curl);
 
-        if ($response === false && $err) {
-            return array();
+        if ($response === false) {
+            return array('error' => $err);
         } else {
             $response = json_decode($response, true);
             return $response;
